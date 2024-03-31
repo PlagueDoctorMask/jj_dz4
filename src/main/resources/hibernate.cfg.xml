@@ -16,7 +16,7 @@
 
         <!-- List of XML mapping files -->
         <mapping package="org.example"/>
-        <mapping class="org.example.Student"/>
+        <mapping class="org.example.domen.Student"/>
         <!--<mapping class="ru.gb.lesson4.Department"/>-->
 
     </session-factory>

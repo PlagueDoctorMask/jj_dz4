@@ -1,22 +1,21 @@
 package org.example;
 
+import org.example.domen.Student;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
-
-import javax.management.Query;
 
 public class Main {
     public static void main(String[] args) {
 
         Configuration configuration = new Configuration().configure();
         try(SessionFactory sessionFactory = configuration.buildSessionFactory()){
-            InsertNewStudents(sessionFactory);//persist
-            FindById(sessionFactory,2);//Find(by id)
-            UpdateAge(sessionFactory);//merge
+            InsertNewStudents(sessionFactory);
+            FindById(sessionFactory,2);
+            UpdateAge(sessionFactory);
             FindWithQL(sessionFactory);//запрос студентов старше 20-ти
-            RemoveStudent(sessionFactory, 4);//remove
+            RemoveStudent(sessionFactory, 4);
             FindById(sessionFactory,4);
 
         }
